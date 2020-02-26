@@ -1,8 +1,9 @@
 import React from 'react';
+import Walkings from './components/Walkings';
 
 function App() {
   return (
-    <h1 style={{textAlign: 'center'}}>Успеха!</h1>
+    <Walkings/> 
   );
 }
 
