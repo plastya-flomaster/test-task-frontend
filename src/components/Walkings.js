@@ -1,29 +1,14 @@
 import React from "react";
 import Walking from './Walking';
+import Ul from './Ul';
 
-function loadWalkings() {
-
-var xhr = new XMLHttpRequest();
-
-xhr.open('GET', 'http://localhost:3000/walking', false);
-
-xhr.send();
-
-if (xhr.status !== 200 && xhr.status !== 304) {
-  alert( xhr.status + ': ' + xhr.statusText );
-} else {
-    return  JSON.parse(xhr.responseText);
-}
-}
-
-function Walkings () {
-    var walkingsDate = loadWalkings();
+function Walkings (props) {
     return (
-      <ul>
-       { walkingsDate.map( walking => {
+      <Ul>
+       { props.walkingsData.map( walking => {
         return <Walking walking={walking}/>
       }) }
-      </ul>
+      </Ul>
     )
 }
 

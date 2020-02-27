@@ -1,9 +1,9 @@
 import React from 'react';
-import Walkings from './components/Walkings';
+import Home from './components/Home';
 
 function App() {
   return (
-    <Walkings/> 
+    <Home/> 
   );
 }
 
