@@ -1,14 +1,14 @@
 import React from "react";
 import Walking from './Walking';
-import Ul from './Ul';
+import Tbody from './Tbody';
 
 function Walkings (props) {
     return (
-      <Ul>
+      <Tbody>
        { props.walkingsData.map( walking => {
-        return <Walking walking={walking}/>
+        return <Walking key={ walking.id }walking={walking}/>
       }) }
-      </Ul>
+      </Tbody>
     )
 }
 

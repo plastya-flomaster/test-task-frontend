@@ -3,7 +3,6 @@ import Wrapper from './Wrapper'
 import WalkingsBlock from './WalkingsBlock';
 
 
-
 function loadWalkings() {
     
     let xhr = new XMLHttpRequest();
@@ -15,17 +14,17 @@ function loadWalkings() {
     if (xhr.status !== 200 && xhr.status !== 304) {
       alert( xhr.status + ': ' + xhr.statusText );
     } else { 
-       return  JSON.parse(xhr.responseText);
+       return JSON.parse(xhr.responseText);    
     }
-}
 
-function Home() {
-    var walkingsData  = loadWalkings();
+};
+
+function Home() {  
+    let walkingsData = loadWalkings();
     return (        
         <Wrapper>
             <WalkingsBlock walkingsData={ walkingsData }/>
         </Wrapper>
     )
-}
-
+};
 export default Home;

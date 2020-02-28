@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.th`
     display: inline-block;
-    text-align: left;
+    text-align: ${props => props.textAlign || "left"};;
     min-width: 41%;
     margin: 8px 0;
     margin-left: ${props => props.marginLeft || "6px"};

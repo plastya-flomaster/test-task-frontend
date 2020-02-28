@@ -1,20 +1,20 @@
 import React from "react";
-import Li from './Li';
-import Part from './Part';
+import Tr from './Tr';
+import Th from './Th';
 import Distance from './Distance'
 import WalkingDate from "./Date";
 
 function primeriDetect(id){
-    if (id % 2 === 0){
-        return true;
+    if (id % 2 !== 0){
+        return "#FFFFFF";
     }
 }
 
 function Walking( props ) {
     return (
-     <Li bgColor={ primeriDetect(props.walking.id) }>
-        <Part marginLeft="16px"><WalkingDate date={ props.walking.date }/></Part>
-        <Part><Distance distance={ props.walking.distance }/></Part>        
-    </Li>
+     <Tr bgColor={ primeriDetect(props.walking.id) }>
+        <Th marginLeft="16px"><WalkingDate date={ props.walking.date }/></Th>
+        <Th><Distance distance={ props.walking.distance }/></Th>        
+    </Tr>
 )}
 export default Walking;

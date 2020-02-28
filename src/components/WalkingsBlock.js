@@ -1,13 +1,16 @@
 import React from 'react';
 import Walkings from './Walkings';
-import Block from './Block';
+import Table from './Table';
+import TitleWalkings from './TitleWalkings';
+import WalkingAdd from './WalkingAdd';
 
 function WalkingsBlock(props) {
     return(
-        <Block>
-            <Header/>
+        <Table>
+            <TitleWalkings/>
             <Walkings walkingsData={ props.walkingsData}/>
-        </Block>
+            <WalkingAdd/>
+        </Table>
     )    
 }
 
