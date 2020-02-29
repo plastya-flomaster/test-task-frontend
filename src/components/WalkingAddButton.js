@@ -15,7 +15,7 @@ function WalkingAdd(props) {
 
     return(
         <Tr bgColor="#EC174F" textAlign="center">
-            <ButtonAdd onClick={props.onClick} onMouseDown={setDown} onMouseUp={setUp}>
+            <ButtonAdd onClick={props.openForm} onMouseDown={setDown} onMouseUp={setUp}>
                 <Th marginLeft="0px" textAlign="center"><P fontSize="18px" fontHeight="23px" color={textColor}>Добавить запись</P></Th>
             </ButtonAdd>
         </Tr>
