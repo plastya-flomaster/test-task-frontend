@@ -9,7 +9,7 @@ function WalkingsBlock(props) {
         <Table>
             <TitleWalkings/>
             <Walkings walkingsData={ props.walkingsData}/>
-            <WalkingAdd/>
+            <WalkingAdd onClick={props.onClick}/>
         </Table>
     )    
 }
